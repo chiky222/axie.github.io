@@ -11,12 +11,20 @@ function init(){
         resultado.textContent = 3;
     }
     mas.onclick = function(e){
-        resultado.textContent = parseInt(resultado.textContent) + 1;
+        if (resultado.textContent < 10) {
+            resultado.textContent = parseInt(resultado.textContent) + 1;
+        }else{
+            alert("¡Energía Máxima!");
+        }
     }
     turno.onclick = function(e){
         resultado.textContent = parseInt(resultado.textContent) + 2;
     }
     menos.onclick = function(e){
-        resultado.textContent = parseInt(resultado.textContent) - 1;
+        if (resultado.textContent > 0) {
+            resultado.textContent = parseInt(resultado.textContent) - 1;
+        }else{
+            alert("¡No hay más energías!");
+        }
     }
 }
