@@ -18,7 +18,13 @@ function init(){
         }
     }
     turno.onclick = function(e){
-        resultado.textContent = parseInt(resultado.textContent) + 2;
+        if (resultado.textContent < 9) {
+            resultado.textContent = parseInt(resultado.textContent) + 2;
+        }else if (resultado.textContent = 9) {
+            resultado.textContent = parseInt(resultado.textContent) + 1;
+        }else{
+            alert("¡Energía Máxima!");
+        }
     }
     menos.onclick = function(e){
         if (resultado.textContent > 0) {
